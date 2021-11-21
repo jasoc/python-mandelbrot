@@ -6,6 +6,9 @@ import numpy as np
 
 
 def mandelbrot(exp):
+    
+    print("\nprinting Z=Z^N + C")
+    print(f"with N = {exp}")
 
     max = 4
     it = 10
@@ -62,7 +65,7 @@ def main():
 
         for i in arr:
             mandelbrot(i)
-            time.sleep(0.03)
+            time.sleep(0.05)
 
             if i != arr[-1]:
                 os.system('cls')
