@@ -7,8 +7,7 @@ import numpy as np
 
 def mandelbrot(exp):
     
-    print("\nprinting Z=Z^N + C")
-    print(f"with N = {exp}")
+
 
     max = 4
     it = 10
@@ -19,6 +18,8 @@ def mandelbrot(exp):
     def z(x, c, exp):
         return (x ** exp) + c
 
+    out = ""
+    
     for x in x_axis:
 
         conc = ""
@@ -43,8 +44,9 @@ def mandelbrot(exp):
             else:
                 conc += "  "
 
-        print(conc)
-
+        out += f"{conc}\n"
+        
+    print(out, f"printing [ Z=Z^N + C ] with N = {exp}")
 
 def main():
 
@@ -65,10 +67,10 @@ def main():
 
         for i in arr:
             mandelbrot(i)
-            time.sleep(0.05)
+            time.sleep(0.001)
 
             if i != arr[-1]:
-                os.system('cls')
+                os.system("clear")
     else:
         mandelbrot(exp)
 
