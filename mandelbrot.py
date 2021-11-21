@@ -6,8 +6,6 @@ import numpy as np
 
 
 def mandelbrot(exp):
-    
-
 
     max = 4
     it = 10
