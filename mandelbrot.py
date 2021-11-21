@@ -68,7 +68,11 @@ def main():
             time.sleep(0.001)
 
             if i != arr[-1]:
-                os.system("clear")
+                if sys.platform == 'win32':
+                    os.system("cls")
+                else:
+                    os.system("clear")
+
     else:
         mandelbrot(exp)
 
