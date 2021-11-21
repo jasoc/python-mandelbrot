@@ -1,7 +1,7 @@
 # Python Mandelbrot
 ### A simple python script that print the Mandelbrot set for every power of the formal formula.
 
-```python
+```
                                                                         **
 
 
@@ -77,12 +77,11 @@ mandelbrot.py --iterate 3
 ```
 
 will print
-
 <img src="https://render.githubusercontent.com/render/math?color=white&math=z = z^1 + c">
 then
 <img src="https://render.githubusercontent.com/render/math?color=white&math=z = z^2 + c">
 and
 <img src="https://render.githubusercontent.com/render/math?color=white&math=z = z^3 + c">
 
-No external library is required to run the code. Have fun.
+Install dependencies with ```pip install -r requirements.txt```
 #### And sorry for some dumb math trick inside the code :monkey_face:
