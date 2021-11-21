@@ -17,7 +17,7 @@ def mandelbrot(exp):
         return (x ** exp) + c
 
     out = ""
-    
+
     for x in x_axis:
 
         conc = ""
@@ -43,8 +43,9 @@ def mandelbrot(exp):
                 conc += "  "
 
         out += f"{conc}\n"
-        
+
     print(out, f"printing [ Z=Z^N + C ] with N = {exp}")
+
 
 def main():
 
