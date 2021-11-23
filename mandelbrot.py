@@ -64,13 +64,16 @@ def main():
         step = 0.05
         arr = np.arange(0, exp + step, step)
 
-        os.system("cls" if sys.platform == 'win32' else "clear")
+        try:
+            for i in arr:
+                mandelbrot(i)
 
-        for i in arr:
-            mandelbrot(i)
+                if i != arr[-1]:
+                    print("\x1b[H")
 
-            if i != arr[-1]:
-                print("\x1b[H")
+        except KeyboardInterrupt:
+            print("\x1b[H")
+            os.system("cls" if sys.platform == 'win32' else "clear")
 
     else:
         mandelbrot(exp)
