@@ -10,11 +10,11 @@ def mandelbrot(exp):
     max = 4
     it = 10
 
-    x_axis = [_ * 0.05 for _ in range(-max*7, max*7)]
-    y_axis = [_ * 0.05 for _ in range(-max*10, max*10)]
+    x_axis = [_ * 0.05 for _ in range(-max * 7, max * 7)]
+    y_axis = [_ * 0.05 for _ in range(-max * 10, max * 10)]
 
     def z(x, c, exp):
-        return (x ** exp) + c
+        return (x**exp) + c
 
     out = ""
 
@@ -63,16 +63,15 @@ def main():
     if iterate:
         step = 0.05
         arr = np.arange(0, exp + step, step)
+        
+        os.system("cls" if sys.platform == 'win32' else "clear")
 
         for i in arr:
             mandelbrot(i)
-            time.sleep(0.001)
+            #time.sleep(0.001)
 
             if i != arr[-1]:
-                if sys.platform == 'win32':
-                    os.system("cls")
-                else:
-                    os.system("clear")
+                print("\x1b[H")
 
     else:
         mandelbrot(exp)
