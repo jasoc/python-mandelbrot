@@ -37,7 +37,7 @@ def mandelbrot(exp):
                 if abs(res) >= max:
                     break
 
-            if abs(res) <= 1:
+            if abs(res) <= max:
                 conc += "**"
             else:
                 conc += "  "
