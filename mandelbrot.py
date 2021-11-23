@@ -63,12 +63,11 @@ def main():
     if iterate:
         step = 0.05
         arr = np.arange(0, exp + step, step)
-        
+
         os.system("cls" if sys.platform == 'win32' else "clear")
 
         for i in arr:
             mandelbrot(i)
-            #time.sleep(0.001)
 
             if i != arr[-1]:
                 print("\x1b[H")
