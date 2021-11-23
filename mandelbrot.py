@@ -62,7 +62,7 @@ def main():
 
     if iterate:
         step = 0.05
-        arr = np.arange(0, exp + step, step)
+        arr = np.arange(1, exp + step, step)
 
         try:
             for i in arr:
