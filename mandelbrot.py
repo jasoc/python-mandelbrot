@@ -34,7 +34,7 @@ def mandelbrot(exp):
                 else:
                     res = z(res, c, exp)
 
-                if abs(res) >= 100:
+                if abs(res) >= max:
                     break
 
             if abs(res) <= 1:
